@@ -1,7 +1,7 @@
 baseURL: 'https://drawn123.github.io/'
 languageCode: 'zh-cn'
 title: "Drawn123's Blog"
-theme: 'PaperMod'
+theme: 'stack'
 
 params:
   defaultTheme: 'auto'
