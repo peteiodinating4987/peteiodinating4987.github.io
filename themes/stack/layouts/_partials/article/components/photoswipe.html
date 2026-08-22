@@ -1,10 +1,6 @@
 {{- $opts := dict "minify" hugo.IsProduction "format" "esm" -}}
 {{- $galleryScript := resources.Get "ts/gallery.ts" | js.Build $opts -}}
 
-{{ $style := hugo.Data.external.PhotoSwipe.Style }}
-{{ $core := hugo.Data.external.PhotoSwipe.Core }}
-{{ $lightbox := hugo.Data.external.PhotoSwipe.Lightbox }}
-
 <script type="module">
     import gallery from '{{ $galleryScript.RelPermalink }}';
 
@@ -14,8 +10,8 @@
     if (shouldLoad) {
         gallery(articleContent);
 
-        const PhotoSwipeLightbox = (await import("{{ $lightbox | safeJS }}")).default;
-        const styleHref = "{{ $style | safeJS }}";
+        const PhotoSwipeLightbox = (await import("https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.css";
 
         const styleTag = document.createElement('link');
         styleTag.rel = 'stylesheet';
@@ -25,7 +21,7 @@
         const lightbox = new PhotoSwipeLightbox({
             gallerySelector: '.article-content',
             childSelector: 'figure a.image-link',
-            pswpModule: () => import("{{ $core | safeJS }}")
+            pswpModule: () => import("https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.min.js")
         });
         lightbox.init();
     }
