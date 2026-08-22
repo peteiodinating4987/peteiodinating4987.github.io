@@ -5,7 +5,7 @@
             {{- $authorEmail = . -}}
         {{- end -}}
     {{- end -}}
-{{- end }}
+{{- end -}}
 
 {{- $authorName := "" -}}
 {{- with site.Params.author -}}
@@ -13,9 +13,8 @@
         {{- with .name -}}
             {{- $authorName = . -}}
         {{- end -}}
-    {{- end -}}
     {{- else -}}
-        {{- $authorName  = . -}}
+        {{- $authorName = . -}}
     {{- end -}}
 {{- end -}}
 
