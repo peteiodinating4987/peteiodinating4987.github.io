@@ -1,0 +1,16 @@
+baseURL: 'https://drawn123.github.io/'
+languageCode: 'zh-cn'
+title: "Drawn123's Blog"
+theme: 'PaperMod'
+
+params:
+  defaultTheme: 'auto'
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+
+markup:
+  goldmark:
+    passthrough:
+      delimiters:
+        block: [['$$', '$$']]
+        inline: [['$', '$']]
