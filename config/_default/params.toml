@@ -5,8 +5,6 @@ rssFullContent = true
 favicon        = "img/favicon.png"
 
 # Accepted values: "default", "lastmod"
-# default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
-# lastmod = sort by last modified date, in descending order
 SortBy              = "default"
 
 [footer]
@@ -14,8 +12,8 @@ SortBy              = "default"
     customText = ""
 
 [dateFormat]
-    published   = ":date_full"
-    lastUpdated = ":date_full"
+    published = "2006-01-02"
+    lastmod   = "2006-01-02"
 
 [sidebar]
     emoji    = "🍥"
@@ -52,6 +50,3 @@ SortBy              = "default"
 [comments]
     enabled  = true
     provider = "disqus"
-
-    # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
-    # Copy the configurations you need from there and paste it here.
