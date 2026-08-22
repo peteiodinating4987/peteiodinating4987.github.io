@@ -1,0 +1,8 @@
+[zh-cn]
+    languageName = "中文"
+    languageCode = "zh-cn"
+    title        = "Drawn123's Blog"
+    weight       = 1
+    
+    [zh-cn.params]
+        dateFormat = "2006-01-02"
