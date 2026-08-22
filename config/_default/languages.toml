@@ -4,5 +4,6 @@
     title        = "Drawn123's Blog"
     weight       = 1
     
-    [zh-cn.params]
-        dateFormat = "2006-01-02"
+    [zh-cn.params.dateFormat]
+        published = "2006-01-02"
+        lastmod   = "2006-01-02"
